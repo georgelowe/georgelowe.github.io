@@ -1,21 +1,29 @@
 :root {
   --primary-color: green;
-  --hover-colour: #fe6a6b;
+  --title-colour: #ffffff;
+  --hover-colour: #da7b93;
+  --button-colour: #376e64;
 }
 
 html {
   padding: 0;
   margin: 0;
   font-family: sans-serif;
+  background-color: #2f4454;
 }
 
 a {
   text-decoration: none;
-  color: var(--primary-color);
+  color: var(--title-colour);
 }
 
 a:hover {
   color: var(--hover-colour);
+}
+
+.page-container {
+  width: 80%;
+  margin: auto;
 }
 
 nav {
@@ -35,6 +43,20 @@ nav {
   display: inline-block;
 }
 
+.contact-btn {
+  border-width: 0.2rem;
+  border-style: solid;
+  border-color: var(--button-colour);
+  padding: 0.5rem;
+  border-radius: 5px;
+}
+
+.contact-btn:hover,
+a:hover {
+  background-color: var(--button-colour);
+  color: var(--title-colour);
+}
+
 .banner {
   text-align: center;
   padding: 2rem 0 10rem 0;
@@ -42,10 +64,11 @@ nav {
 
 .banner-title {
   font-weight: 900;
-  color: var(--primary-color);
-  margin: auto;
+  color: var(--title-colour);
+  margin: 1rem;
 }
 
-.banner-description {
+.banner-tagline {
   margin: 0rem auto 1rem auto;
+  color: var(--title-colour);
 }
