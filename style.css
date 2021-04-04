@@ -1,25 +1,35 @@
 :root {
-  --primary-color: green;
   --title-colour: #ffffff;
-  --hover-colour: #da7b93;
-  --button-colour: #376e64;
+  --main-text-colour: #ccd6f6;
+  --secondary-text-colour: #8892b0;
+  --highlight-colour: #da7b93;
   --terminal-bg: #232323;
 }
 
 html {
   padding: 0;
   margin: 0;
-  font-family: sans-serif;
+  font-family: "Nunito Sans", sans-serif;
   background-color: #2f4454;
 }
 
-a {
+.nav-link {
   text-decoration: none;
-  color: var(--title-colour);
+  color: var(--main-text-colour);
 }
 
-a:hover {
-  color: var(--hover-colour);
+.nav-link:hover {
+  color: var(--highlight-colour);
+}
+
+.paragraph-link {
+  text-decoration: none;
+  color: var(--highlight-colour);
+}
+
+.paragraph-link:hover {
+  text-decoration: underline;
+  color: var(--highlight-colour);
 }
 
 .page-container {
@@ -50,19 +60,22 @@ nav {
 .contact-btn {
   border-width: 0.2rem;
   border-style: solid;
-  border-color: var(--button-colour);
+  border-color: var(--highlight-colour);
   padding: 0.5rem;
   border-radius: 5px;
 }
 
-.contact-btn:hover,
-a:hover {
-  background-color: var(--button-colour);
-  color: var(--title-colour);
+.contact-link {
+  text-decoration: none;
+  color: var(--main-text-colour);
+}
+
+.contact-btn:hover {
+  background-color: var(--highlight-colour);
 }
 
 .banner {
-  text-align: center;
+  text-align: left;
   padding: 0rem;
   margin: 0;
 }
@@ -70,16 +83,25 @@ a:hover {
 .banner-title {
   font-weight: 900;
   color: var(--title-colour);
-  margin: 1rem;
+  margin: 0;
+  font-size: 300%;
 }
 
 .banner-tagline {
   margin: 0rem auto 1rem auto;
-  color: var(--title-colour);
+  color: var(--main-text-colour);
+  margin-bottom: 0px;
+  font-size: 200%;
+}
+
+.banner-description {
+  margin-top: 0px;
+  width: 75%;
+  color: var(--secondary-text-colour);
 }
 
 .terminal {
-  margin-top: 1rem 0 1rem 0;
+  margin: 1rem 0 1rem 0;
   padding: 2rem;
   color: white;
   text-align: left;
@@ -87,4 +109,44 @@ a:hover {
   background-color: var(--terminal-bg);
   min-height: 300px;
   box-shadow: 6px 6px 13px 0px rgba(50, 50, 50, 0.93);
+}
+
+.information {
+  color: var(--secondary-text-colour);
+  margin-bottom: 0px;
+}
+
+.highlighted-text {
+  color: var(--highlight-colour);
+}
+
+.cards {
+  margin-top: 2rem;
+  display: grid;
+  grid-gap: 1rem;
+}
+
+.card {
+  border-radius: 8px;
+  background: linear-gradient(145deg, #2a3d4d, #32495b);
+  box-shadow: 6px 6px 16px #141d24, -6px -6px 16px #4a6b86;
+  color: var(--secondary-text-colour);
+  padding: 1rem;
+  text-align: left;
+  height: 10rem;
+}
+
+.section-title {
+  color: var(--main-text-colour);
+  font-size: 200%;
+  margin-top: 0px;
+}
+
+.get-in-touch {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+
+.footer {
+  color: var(--secondary-text-colour);
 }
