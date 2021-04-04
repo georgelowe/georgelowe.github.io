@@ -57,7 +57,7 @@ nav {
   display: inline-block;
 }
 
-.contact-btn {
+.cta-btn {
   border-width: 0.2rem;
   border-style: solid;
   border-color: var(--highlight-colour);
@@ -65,12 +65,12 @@ nav {
   border-radius: 5px;
 }
 
-.contact-link {
+.cta-link {
   text-decoration: none;
   color: var(--main-text-colour);
 }
 
-.contact-btn:hover {
+.cta-btn:hover {
   background-color: var(--highlight-colour);
 }
 
