@@ -14,8 +14,7 @@ html {
   padding: 0;
   margin: 0;
   font-family: "Nunito Sans", sans-serif;
-  /* background-color: #2f4454; */
-  background-color: aqua;
+  background-color: #2f4454;
 }
 
 .nav-link {
