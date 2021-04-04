@@ -3,6 +3,7 @@
   --title-colour: #ffffff;
   --hover-colour: #da7b93;
   --button-colour: #376e64;
+  --terminal-bg: #232323;
 }
 
 html {
@@ -24,12 +25,15 @@ a:hover {
 .page-container {
   width: 80%;
   margin: auto;
+  align-items: center;
+  text-align: center;
 }
 
 nav {
   list-style-type: none;
   margin: 0;
   padding: 0;
+  height: 84px;
 }
 
 .navigation {
@@ -59,7 +63,8 @@ a:hover {
 
 .banner {
   text-align: center;
-  padding: 2rem 0 10rem 0;
+  padding: 0rem;
+  margin: 0;
 }
 
 .banner-title {
@@ -71,4 +76,15 @@ a:hover {
 .banner-tagline {
   margin: 0rem auto 1rem auto;
   color: var(--title-colour);
+}
+
+.terminal {
+  margin-top: 1rem 0 1rem 0;
+  padding: 2rem;
+  color: white;
+  text-align: left;
+  border-radius: 10px;
+  background-color: var(--terminal-bg);
+  min-height: 300px;
+  box-shadow: 6px 6px 13px 0px rgba(50, 50, 50, 0.93);
 }
