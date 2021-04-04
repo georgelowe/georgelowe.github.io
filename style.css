@@ -6,6 +6,10 @@
   --terminal-bg: #232323;
 }
 
+a {
+  text-decoration: none;
+}
+
 html {
   padding: 0;
   margin: 0;
@@ -20,6 +24,7 @@ html {
 
 .nav-link:hover {
   color: var(--highlight-colour);
+  cursor: pointer;
 }
 
 .paragraph-link {
@@ -30,6 +35,7 @@ html {
 .paragraph-link:hover {
   text-decoration: underline;
   color: var(--highlight-colour);
+  cursor: pointer;
 }
 
 .page-container {
@@ -72,6 +78,7 @@ nav {
 
 .cta-btn:hover {
   background-color: var(--highlight-colour);
+  cursor: pointer;
 }
 
 .banner {
@@ -127,26 +134,71 @@ nav {
 }
 
 .card {
+  border: none;
   border-radius: 8px;
   background: linear-gradient(145deg, #2a3d4d, #32495b);
   box-shadow: 6px 6px 16px #141d24, -6px -6px 16px #4a6b86;
   color: var(--secondary-text-colour);
   padding: 1rem;
   text-align: left;
-  height: 10rem;
+  height: max-content;
+  position: relative;
+  font-size: 100%;
+}
+
+.card:focus {
+  outline: none;
+}
+
+.card:hover {
+  background: var(--highlight-colour);
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.demo-code-title {
+  text-decoration: none;
+  color: var(--secondary-text-colour);
+  position: absolute;
+  bottom: 0rem;
+  right: 3rem;
+}
+
+.demo-code {
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+}
+
+.project-title {
+  font-size: 130%;
+  margin-bottom: 0.5rem;
+}
+.project-description {
+  margin-bottom: 2.5rem;
 }
 
 .section-title {
   color: var(--main-text-colour);
   font-size: 200%;
-  margin-top: 0px;
+  margin-top: 3rem;
+  margin-bottom: 0rem;
 }
 
 .get-in-touch {
-  padding-top: 5rem;
-  padding-bottom: 5rem;
+  padding: 0rem;
+  display: grid;
+  justify-content: center;
 }
 
 .footer {
   color: var(--secondary-text-colour);
+}
+
+.icons {
+  padding-bottom: 2rem;
+}
+
+.icon {
+  padding: 0rem 0.5rem 0rem 0.5rem;
 }
