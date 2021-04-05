@@ -1,4 +1,5 @@
 :root {
+  --background-colour: #2f4454;
   --title-colour: #ffffff;
   --main-text-colour: #ccd6f6;
   --secondary-text-colour: #8892b0;
@@ -14,7 +15,7 @@ html {
   padding: 0;
   margin: 0;
   font-family: "Nunito Sans", sans-serif;
-  background-color: #2f4454;
+  background-color: var(--background-colour);
 }
 
 .nav-link {
@@ -66,14 +67,13 @@ nav {
 .cta-btn {
   border-width: 0.2rem;
   border-style: solid;
+  background-color: var(--background-colour);
   border-color: var(--highlight-colour);
   padding: 0.5rem;
   border-radius: 5px;
-}
-
-.cta-link {
   text-decoration: none;
   color: var(--main-text-colour);
+  font-size: 100%;
 }
 
 .cta-btn:hover {
@@ -109,13 +109,33 @@ nav {
 
 .terminal {
   margin: 1rem 0 1rem 0;
-  padding: 2rem;
+
   color: white;
   text-align: left;
   border-radius: 10px;
   background-color: var(--terminal-bg);
   min-height: 300px;
   box-shadow: 6px 6px 13px 0px rgba(50, 50, 50, 0.93);
+}
+
+.terminal-menu-bar {
+  background-color: black;
+  height: 1.5rem;
+  width: 100%;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+pre {
+  white-space: pre-line;
+  margin-left: 1rem;
+}
+
+.code {
+  font-size: 150%;
+}
+
+.code-response {
+  color: #376e6f;
 }
 
 .information {
