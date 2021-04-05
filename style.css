@@ -155,7 +155,9 @@ ul.navigation li:last-child {
 
 pre {
   white-space: pre-line;
-  margin-left: 1rem;
+  margin-top: 1rem;
+  margin-left: 2rem;
+  margin-right: 2rem;
 }
 
 .code {
