@@ -285,6 +285,10 @@ pre {
   position: relative;
 }
 
+.section-title#project-title {
+  margin-top: 0rem;
+}
+
 .close-modal-icon {
   position: absolute;
   top: -2rem;
