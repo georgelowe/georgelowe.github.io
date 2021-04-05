@@ -1,14 +1,13 @@
+/* Global */
+
 :root {
   --background-colour: #2f4454;
   --title-colour: #ffffff;
   --main-text-colour: #ccd6f6;
   --secondary-text-colour: #8892b0;
   --highlight-colour: #da7b93;
-  --terminal-bg: #232323;
-}
-
-a {
-  text-decoration: none;
+  --terminal-background: #232323;
+  --terminal-response: #376e6f;
 }
 
 html {
@@ -18,6 +17,59 @@ html {
   background-color: var(--background-colour);
 }
 
+.page-container {
+  width: 80%;
+  margin: auto;
+  align-items: center;
+  text-align: center;
+}
+
+.in-text-link {
+  text-decoration: none;
+  color: var(--highlight-colour);
+}
+
+.in-text-link:hover {
+  text-decoration: underline;
+  color: var(--highlight-colour);
+  cursor: pointer;
+}
+
+.cta-btn {
+  border-width: 0.2rem;
+  border-style: solid;
+  background-color: var(--background-colour);
+  border-color: var(--highlight-colour);
+  padding: 0.5rem;
+  border-radius: 5px;
+  text-decoration: none;
+  color: var(--main-text-colour);
+  font-size: 100%;
+}
+
+.cta-btn:hover {
+  background-color: var(--highlight-colour);
+  cursor: pointer;
+}
+
+.text-chunk {
+  color: var(--secondary-text-colour);
+  margin-bottom: 0px;
+}
+
+.highlighted-text {
+  color: var(--highlight-colour);
+}
+
+.section-title {
+  color: var(--main-text-colour);
+  font-size: 200%;
+  margin-top: 3rem;
+  margin-bottom: 0rem;
+}
+
+/* Navigation Bar */
+
 .nav-link {
   text-decoration: none;
   color: var(--main-text-colour);
@@ -26,24 +78,6 @@ html {
 .nav-link:hover {
   color: var(--highlight-colour);
   cursor: pointer;
-}
-
-.paragraph-link {
-  text-decoration: none;
-  color: var(--highlight-colour);
-}
-
-.paragraph-link:hover {
-  text-decoration: underline;
-  color: var(--highlight-colour);
-  cursor: pointer;
-}
-
-.page-container {
-  width: 80%;
-  margin: auto;
-  align-items: center;
-  text-align: center;
 }
 
 nav {
@@ -64,22 +98,7 @@ nav {
   display: inline-block;
 }
 
-.cta-btn {
-  border-width: 0.2rem;
-  border-style: solid;
-  background-color: var(--background-colour);
-  border-color: var(--highlight-colour);
-  padding: 0.5rem;
-  border-radius: 5px;
-  text-decoration: none;
-  color: var(--main-text-colour);
-  font-size: 100%;
-}
-
-.cta-btn:hover {
-  background-color: var(--highlight-colour);
-  cursor: pointer;
-}
+/* Introductory Banner */
 
 .banner {
   text-align: left;
@@ -107,12 +126,14 @@ nav {
   color: var(--secondary-text-colour);
 }
 
+/* Animated Terminal Window */
+
 .terminal {
   margin: 1rem 0 1rem 0;
   color: white;
   text-align: left;
   border-radius: 10px;
-  background-color: var(--terminal-bg);
+  background-color: var(--terminal-background);
   height: max-content;
   box-shadow: 6px 6px 13px 0px rgba(50, 50, 50, 0.93);
   position: relative;
@@ -143,17 +164,10 @@ pre {
 }
 
 .code-response {
-  color: #376e6f;
+  color: var(--terminal-response);
 }
 
-.information {
-  color: var(--secondary-text-colour);
-  margin-bottom: 0px;
-}
-
-.highlighted-text {
-  color: var(--highlight-colour);
-}
+/* Project Cards */
 
 .cards {
   margin-top: 2rem;
@@ -180,11 +194,11 @@ pre {
 
 .card:hover {
   background: var(--highlight-colour);
-  color: #ffffff;
+  color: var(--title-colour);
   cursor: pointer;
 }
 
-.demo-code-title {
+.card-git-link {
   text-decoration: none;
   color: var(--secondary-text-colour);
   position: absolute;
@@ -192,7 +206,7 @@ pre {
   right: 3rem;
 }
 
-.demo-code {
+.card-git-icon {
   position: absolute;
   bottom: 1rem;
   right: 1rem;
@@ -206,27 +220,28 @@ pre {
   margin-bottom: 2.5rem;
 }
 
-.section-title {
-  color: var(--main-text-colour);
-  font-size: 200%;
-  margin-top: 3rem;
-  margin-bottom: 0rem;
+.project-tech-stack {
+  display: flex;
 }
 
-.get-in-touch {
+/* Contact Me */
+
+.contact {
   padding: 0rem;
   display: grid;
   justify-content: center;
 }
 
-.footer {
-  color: var(--secondary-text-colour);
-}
-
-.icons {
+.contact-icons {
   padding-bottom: 2rem;
 }
 
 .icon {
   padding: 0rem 0.5rem 0rem 0.5rem;
+}
+
+/* Footer */
+
+.footer {
+  color: var(--secondary-text-colour);
 }
