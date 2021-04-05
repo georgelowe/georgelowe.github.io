@@ -109,13 +109,19 @@ nav {
 
 .terminal {
   margin: 1rem 0 1rem 0;
-
   color: white;
   text-align: left;
   border-radius: 10px;
   background-color: var(--terminal-bg);
-  min-height: 300px;
+  height: max-content;
   box-shadow: 6px 6px 13px 0px rgba(50, 50, 50, 0.93);
+  position: relative;
+}
+
+.restart-terminal {
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
 }
 
 .terminal-menu-bar {
@@ -125,13 +131,15 @@ nav {
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
 }
+
 pre {
   white-space: pre-line;
   margin-left: 1rem;
 }
 
 .code {
-  font-size: 150%;
+  font-size: 130%;
+  line-height: 2;
 }
 
 .code-response {
