@@ -47,7 +47,9 @@ html {
   font-size: 100%;
 }
 
-.cta-btn:hover {
+.cta-btn:hover,
+.cta-btn:focus {
+  outline: none;
   background-color: var(--highlight-colour);
   cursor: pointer;
 }
@@ -256,4 +258,39 @@ pre {
 
 .footer {
   color: var(--secondary-text-colour);
+}
+
+/* Modal */
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+  background-color: var(--background-colour);
+  margin: 10% auto;
+  padding: 20px;
+  border: 1px solid white;
+  min-height: 20%;
+  border-radius: 8px;
+  width: 85%;
+  position: relative;
+}
+
+.close-modal-icon {
+  position: absolute;
+  top: -2rem;
+  left: -1rem;
+}
+
+.close-modal-icon:hover {
+  cursor: pointer;
 }
