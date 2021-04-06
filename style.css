@@ -182,6 +182,10 @@ pre {
   cursor: pointer;
 }
 
+#refresh-terminal:hover {
+  cursor: pointer;
+}
+
 /* Project Cards */
 
 .cards {
@@ -281,7 +285,7 @@ pre {
   background-color: var(--background-colour);
   margin: 10% auto;
   padding: 20px;
-  border: 1px solid white;
+
   border-radius: 8px;
   width: 85%;
   position: relative;
