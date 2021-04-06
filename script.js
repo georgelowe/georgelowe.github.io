@@ -1,9 +1,14 @@
 // // Landing Page DOM Elements
 var projects_container = document.getElementById("projects-container");
 var refresh_terminal_icon = document.getElementById("refresh-terminal");
+var hamburger = document.getElementById("hamburger");
+var nav_ul = document.getElementById("nav-ul");
 
 // Landing Page DOM Event Listeners
 refresh_terminal_icon.addEventListener("click", refresh_terminal, false);
+hamburger.addEventListener("click", () => {
+  nav_ul.classList.toggle("show");
+});
 
 // Modal DOM Elements
 var modal = document.getElementById("project-modal");

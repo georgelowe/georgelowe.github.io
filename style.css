@@ -42,6 +42,7 @@ html {
   background-color: var(--background-colour);
   border-color: var(--highlight-colour);
   padding: 0.5rem;
+
   border-radius: 5px;
   text-decoration: none;
   color: var(--main-text-colour);
@@ -73,9 +74,35 @@ html {
 
 /* Navigation Bar */
 
-.nav-link {
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 1rem;
+  flex-wrap: wrap;
+  position: relative;
+}
+
+.navigation {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 0;
+  list-style-type: none;
+  width: 100%;
+  margin: 0;
+}
+
+.navigation li a {
+  display: inline-block;
+  color: #fff;
   text-decoration: none;
+  padding-left: 2rem;
   color: var(--main-text-colour);
+}
+
+ul.navigation li:last-child {
+  padding-left: 2rem;
 }
 
 .nav-link:hover {
@@ -83,22 +110,49 @@ html {
   cursor: pointer;
 }
 
-.navigation {
-  margin: 0;
-  text-align: right;
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  height: 84px;
+.hamburger {
+  background-color: transparent;
+  border: 0;
+  color: var(--title-colour);
+  font-size: 2.5rem;
+  margin: 0rem;
+  cursor: pointer;
+  display: none;
+  position: absolute;
+  top: 0rem;
+  right: 0rem;
 }
 
-.nav-item {
-  padding: 1rem;
-  display: inline-block;
+.hamburger:focus {
+  outline: none;
 }
 
-ul.navigation li:last-child {
-  padding: 0rem;
+@media screen and (max-width: 767px) {
+  .page-container {
+    width: 95%;
+  }
+  .navigation {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .nav-item {
+    margin-top: 1rem;
+  }
+
+  ul.navigation li:first-child {
+    margin-top: 0rem;
+  }
+
+  .navigation.show {
+    display: flex;
+    font-size: 1.5rem;
+  }
+
+  .hamburger {
+    display: block;
+  }
 }
 
 /* Introductory Banner */
