@@ -72,6 +72,16 @@ html {
   margin-bottom: 0rem;
 }
 
+@media screen and (max-width: 767px) {
+  .page-container {
+    width: 95%;
+  }
+
+  .section-title {
+    font-size: 250%;
+  }
+}
+
 /* Navigation Bar */
 
 nav {
@@ -119,7 +129,7 @@ ul.navigation li:last-child {
   cursor: pointer;
   display: none;
   position: absolute;
-  top: 0rem;
+  top: 1.5rem;
   right: 0rem;
 }
 
@@ -128,9 +138,6 @@ ul.navigation li:last-child {
 }
 
 @media screen and (max-width: 767px) {
-  .page-container {
-    width: 95%;
-  }
   .navigation {
     display: none;
     flex-direction: column;
