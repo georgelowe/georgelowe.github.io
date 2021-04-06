@@ -27,6 +27,7 @@ code_src.addEventListener("click", open_link, false);
 
 window.onload = function () {
   populate_landing_page();
+  terminal_type(0, 0);
 };
 
 let projects = new Map();
@@ -147,7 +148,7 @@ function open_link(e) {
 function refresh_terminal() {
   refresh_terminal_icon.style.display = "none";
   code_container.innerHTML = "";
-  start(0, 0);
+  terminal_type(0, 0);
 }
 
 arr = [
@@ -163,55 +164,25 @@ responses_arr = [
   "[python, javascript, c#, html, css]",
 ];
 
-function start(i, j) {
+function terminal_type(i, j) {
   if (j == arr.length) {
     refresh_terminal_icon.style.display = "block";
-
     return;
   }
   if (i < arr[j].length) {
     setTimeout(function () {
       i++;
       code_container.innerHTML += arr[j][i];
-      // console.log("i is " + i);
-      console.log("j is " + j);
       if (i == arr[j].length - 1) {
         i = 0;
         complete(j);
         j++;
       }
-      start(i, j);
+      terminal_type(i, j);
     }, 80);
   }
 }
-start(0, 0);
 
 function complete(j) {
   code_container.innerHTML += `\n <span class = "code-response"> ${responses_arr[j]}\n </span>`;
 }
-
-// function start(counter) {
-//   if (counter < 40) {
-//     setTimeout(function () {
-//       counter++;
-//       code_container.innerHTML += counter;
-//       console.log(counter);
-//       if (counter == 10) {
-//         complete();
-//       }
-//       if (counter == 20) {
-//         complete20();
-//       }
-//       start(counter);
-//     }, 80);
-//   }
-// }
-// start(0);
-
-// function complete() {
-//   code_container.innerHTML += `\n <span class = "code-response"> count to 10 complete \n </span>`;
-// }
-
-// function complete20() {
-//   code_container.innerHTML += `\n <span class = "code-response"> count to 20 complete \n </span>`;
-// }
