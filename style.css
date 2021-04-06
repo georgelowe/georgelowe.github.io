@@ -130,7 +130,7 @@ ul.navigation li:last-child {
   display: none;
   position: absolute;
   top: 1.5rem;
-  right: 0rem;
+  right: -0.5rem;
 }
 
 .hamburger:focus {
@@ -175,6 +175,13 @@ ul.navigation li:last-child {
   color: var(--title-colour);
   margin: 0;
   font-size: 300%;
+}
+
+@media screen and (max-width: 400px) {
+  h1 span::before {
+    content: "\A";
+    white-space: pre;
+  }
 }
 
 .banner-tagline {
@@ -371,4 +378,12 @@ pre {
 
 .close-modal-icon:hover {
   cursor: pointer;
+}
+
+@media screen and (max-width: 570px) {
+  .close-modal-icon {
+    position: absolute;
+    top: 0.2rem;
+    left: 0.2rem;
+  }
 }
