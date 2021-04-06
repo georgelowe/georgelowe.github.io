@@ -1,7 +1,5 @@
-// Landing Page DOM Elements
-var open_project1_modal = document.getElementById("project1-button");
-var open_project2_modal = document.getElementById("project2-button");
-var open_project3_modal = document.getElementById("project3-button");
+// // Landing Page DOM Elements
+var projects_container = document.getElementById("projects-container");
 
 // Modal DOM Elements
 var modal = document.getElementById("project-modal");
@@ -11,50 +9,79 @@ var media_src = document.getElementById("media-src");
 var code_src = document.getElementById("code-src");
 var close_modal_btn = document.getElementsByClassName("close-modal-icon")[0];
 
-// Landing Page Event Listeners
-open_project1_modal.addEventListener("click", open_modal, false);
-open_project2_modal.addEventListener("click", open_modal, false);
-open_project3_modal.addEventListener("click", open_modal, false);
-
 // Modal Event Listeners
 close_modal_btn.addEventListener("click", close_modal, false);
 code_src.addEventListener("click", open_link, false);
 
+window.onload = function () {
+  populate_landing_page();
+};
+
 let projects = new Map();
-projects.set("Instagram", {
-  title: "Instagram Project",
-  description: "This is my instagram automation bot project",
+projects.set("1", {
+  id: "project1",
+  title: "Instagram Automation Bot 💬",
+  description:
+    "I designed and implemented this bot out of the desire to automate tasks I faced when growing a brand Instagram. Features include, calculating users that do not follow an account back and unfollowing them, liking and commenting on posts by a set of specific users or hashtags and analysing growth data over time.",
   media_src: "Ball.mp4",
   code_src: "https://github.com/georgelowe/Instagram-Automation",
 });
-projects.set("VR", {
-  title: "VR Project",
-  description: "This is my VR project",
+projects.set("2", {
+  id: "project2",
+  title: "Camera-based object tracking for VR experiences 📸",
+  description:
+    "This project introduces a complete system, such that a physical object is tracked using a webcam and reproduced in the same precise location within a virtual environment, allowing users to manipulate the object whilst in virtual reality.",
   media_src: "Ball.mp4",
   code_src: "https://github.com/georgelowe/VR-Object-Tracking",
 });
-projects.set("Website", {
-  title: "Portfolio Project",
-  description: "This is my portfolio project",
+projects.set("3", {
+  id: "project3",
+  title: "Responsive Portolio Website",
+  description:
+    "This website that you are currently visiting was designed and produced by me to showcase my work, provide links to my code and to allow potential employers to reach out and contact me.",
   media_src: "Ball.mp4",
   code_src: "https://github.com/georgelowe/georgelowe.github.io",
 });
 
-function populate_landing_page() {}
+function populate_landing_page() {
+  projects.forEach((project) => {
+    const project_el = document.createElement("div");
+    project_el.id = project.id;
+    project_el.innerHTML = `<button class="card">
+    <div class="project-title">
+    ${project.title}
+    </div>
+    <div class="project-description">
+    ${project.description}
+    </div>
+    <div class="project-tech-stack"></div>
+    <a href="${project.code_src}"
+      ><div class="view-source-btn">
+        <p class="card-git-link">View Code</p>
+        <i
+          class="fab fa-github card-git-icon"
+          style="font-size: 1.5rem; color: #ccd6f6"
+        ></i></div
+    ></a>
+  </button>`;
+    project_el.addEventListener("click", open_modal, false);
+    projects_container.appendChild(project_el);
+  });
+}
 
 function open_modal(e) {
   modal.style.display = "block";
 
   if (this.id.includes("project1")) {
-    let project = projects.get("VR");
+    let project = projects.get("1");
     populate_modal(project);
   }
   if (this.id.includes("project2")) {
-    let project = projects.get("Instagram");
+    let project = projects.get("2");
     populate_modal(project);
   }
   if (this.id.includes("project3")) {
-    let project = projects.get("Website");
+    let project = projects.get("3");
     populate_modal(project);
   }
 }
