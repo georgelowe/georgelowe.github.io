@@ -142,6 +142,7 @@ ul.navigation li:last-child {
     display: none;
     flex-direction: column;
     width: 100%;
+    background-color: red;
   }
 
   .nav-item {
