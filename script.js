@@ -8,6 +8,7 @@ var project_text = document.getElementById("project-text");
 var media_src = document.getElementById("media-src");
 var code_src = document.getElementById("code-src");
 var close_modal_btn = document.getElementsByClassName("close-modal-icon")[0];
+var video_container = document.getElementById("video-container");
 
 // Modal Event Listeners
 close_modal_btn.addEventListener("click", close_modal, false);
@@ -23,7 +24,7 @@ projects.set("1", {
   title: "Instagram Automation Bot 💬",
   description:
     "I designed and implemented this bot out of the desire to automate tasks I faced when growing a brand Instagram. Features include, calculating users that do not follow an account back and unfollowing them, liking and commenting on posts by a set of specific users or hashtags and analysing growth data over time.",
-  media_src: "Ball.mp4",
+  media_src: "",
   code_src: "https://github.com/georgelowe/Instagram-Automation",
 });
 projects.set("2", {
@@ -31,7 +32,7 @@ projects.set("2", {
   title: "Camera-based object tracking for VR experiences 📸",
   description:
     "This project introduces a complete system, such that a physical object is tracked using a webcam and reproduced in the same precise location within a virtual environment, allowing users to manipulate the object whilst in virtual reality.",
-  media_src: "Ball.mp4",
+  media_src: "Media/Ball.mp4",
   code_src: "https://github.com/georgelowe/VR-Object-Tracking",
 });
 projects.set("3", {
@@ -39,7 +40,7 @@ projects.set("3", {
   title: "Responsive Portolio Website",
   description:
     "This website that you are currently visiting was designed and produced by me to showcase my work, provide links to my code and to allow potential employers to reach out and contact me.",
-  media_src: "Ball.mp4",
+  media_src: "",
   code_src: "https://github.com/georgelowe/georgelowe.github.io",
 });
 
@@ -71,7 +72,6 @@ function populate_landing_page() {
 
 function open_modal(e) {
   modal.style.display = "block";
-
   if (this.id.includes("project1")) {
     let project = projects.get("1");
     populate_modal(project);
@@ -90,6 +90,11 @@ function populate_modal(project) {
   project_title.textContent = project.title;
   project_text.textContent = project.description;
   media_src.textContent = project.media_src;
+  if (project.media_src === "") {
+    video_container.style.display = "none";
+  } else {
+    video_container.style.display = "block";
+  }
   code_src.id = project.code_src;
 }
 
