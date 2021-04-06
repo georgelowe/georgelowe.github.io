@@ -19,6 +19,7 @@ html {
 
 .page-container {
   width: 80%;
+  max-width: 1000px;
   margin: auto;
   align-items: center;
   text-align: center;
@@ -186,7 +187,8 @@ pre {
 .cards {
   margin-top: 2rem;
   display: grid;
-  grid-gap: 1rem;
+
+  grid-gap: 2rem;
 }
 
 .card {
@@ -231,11 +233,11 @@ pre {
   margin-bottom: 0.5rem;
 }
 .project-description {
-  margin-bottom: 2.5rem;
+  margin-bottom: 2rem;
 }
 
 .project-tech-stack {
-  display: flex;
+  display: none;
 }
 
 /* Contact Me */
@@ -279,7 +281,6 @@ pre {
   margin: 10% auto;
   padding: 20px;
   border: 1px solid white;
-  min-height: 20%;
   border-radius: 8px;
   width: 85%;
   position: relative;
@@ -287,6 +288,13 @@ pre {
 
 .section-title#project-title {
   margin-top: 0rem;
+}
+
+.vid {
+  margin-bottom: 1rem;
+}
+.vid:focus {
+  outline: none;
 }
 
 .close-modal-icon {

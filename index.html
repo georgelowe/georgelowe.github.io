@@ -66,14 +66,21 @@
            <span class="code-response"><a class="code-response-link" href="mailto:georgeloweone@gmail.com">georgeloweone@gmail.com</a></span>
            ~ $ george.languages()
            <span class="code-response">[python, javascript, c#, html, css]</span>
+           ~ $ george.languages()
+           <span class="code-response">[python, javascript, c#, html, css]</span>
+           ~ $ george.languages()
+           <span class="code-response">[python, javascript, c#, html, css]</span>
+           ~ $ george.languages()
+           <span class="code-response">[python, javascript, c#, html, css]</span>
+           ~ $ george.languages()
+           <span class="code-response">[python, javascript, c#, html, css]</span>
           </code>
         </pre>
-        <a
-          ><div>
-            <i
-              class="fas fa-redo restart-terminal"
-              style="font-size: 1.2rem; color: #ccd6f6"
-            ></i></div
+        <a>
+          <i
+            class="fas fa-redo restart-terminal"
+            style="font-size: 1.2rem; color: #ccd6f6"
+          ></i
         ></a>
       </div>
 
@@ -89,6 +96,9 @@
           veritatis deserunt. Voluptatum autem et ad, illo illum sit excepturi
           deleniti corporis ipsum
         </p>
+        <p class="highlighted-text">
+          Click on a project to see more information
+        </p>
       </div>
 
       <div id="projects" class="cards">
@@ -96,12 +106,14 @@
           <div class="project-title">
             Camera-based object tracking for VR experiences 📸
           </div>
+
           <div class="project-description">
             This project introduces a complete system, such that a physical
             object is tracked using a webcam and reproduced in the same precise
             location within a virtual environment, allowing users to manipulate
             the object whilst in virtual reality.
           </div>
+
           <div class="project-tech-stack"></div>
           <a href="https://github.com/georgelowe/VR-Object-Tracking"
             ><div class="view-source-btn">
@@ -156,8 +168,9 @@
       <div id="project-modal" class="modal">
         <div class="modal-content">
           <h2 id="project-title" class="section-title">Project</h2>
-          <div id="project-text" class="text-chunk">
-            <p>
+
+          <div class="text-chunk">
+            <p id="project-text">
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
               Voluptatem cumque et iste dolorem officia adipisci ipsum, cum hic
               consequatur velit. optio quod repellat nostrum. Alias quo
@@ -165,8 +178,13 @@
               quia dolores rerum placeat iure, deleniti quis, pariatur dolor qui
               molestias consequatur eum veritatis deserunt
             </p>
+            <div>
+              <video controls class="vid" width="100%" height="100%" muted>
+                <source id="media-src" src="Media/Ball.mp4" type="video/mp4" />
+              </video>
+            </div>
 
-            <button id="project-source-code" class="cta-btn">
+            <button src="github.com " id="code-src" class="cta-btn">
               Source Code
             </button>
           </div>
