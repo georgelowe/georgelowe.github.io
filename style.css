@@ -287,6 +287,9 @@ pre {
   cursor: pointer;
 }
 
+/* .view-source-btn {
+  margin-left: 1rem;
+} */
 .card-git-link {
   text-decoration: none;
   color: var(--secondary-text-colour);
@@ -309,8 +312,24 @@ pre {
   margin-bottom: 2rem;
 }
 
-.project-tech-stack {
-  display: none;
+.tech-badge-container {
+  width: 80%;
+}
+
+.tech-badge {
+  text-align: center;
+  padding: 4px;
+  margin: 2px;
+  border-radius: 13px;
+  display: inline-block;
+  color: white;
+  background-color: var(--highlight-colour);
+}
+
+@media screen and (max-width: 315px) {
+  .card-git-link {
+    display: none;
+  }
 }
 
 /* Contact Me */
