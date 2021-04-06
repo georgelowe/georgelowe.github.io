@@ -145,7 +145,7 @@ ul.navigation li:last-child {
   }
 
   nav {
-    background-color: sandybrown;
+    width: 100%;
   }
 
   .nav-item {
