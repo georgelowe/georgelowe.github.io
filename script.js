@@ -3,6 +3,7 @@ var projects_container = document.getElementById("projects-container");
 var refresh_terminal_icon = document.getElementById("refresh-terminal");
 var hamburger = document.getElementById("hamburger");
 var nav_ul = document.getElementById("nav-ul");
+var code_container = document.getElementsByClassName("code")[0];
 
 // Landing Page DOM Event Listeners
 refresh_terminal_icon.addEventListener("click", refresh_terminal, false);
@@ -144,6 +145,73 @@ function open_link(e) {
 }
 
 function refresh_terminal() {
-  //   alert("refresh called");
-  //   refresh_terminal_icon.style.display = "none";
+  refresh_terminal_icon.style.display = "none";
+  code_container.innerHTML = "";
+  start(0, 0);
 }
+
+arr = [
+  "~ $ george.education()",
+  "~ $ george.location()",
+  "~ $ george.email()",
+  "~ $ george.languages()",
+];
+responses_arr = [
+  "BSc Computer Science, University of Nottingham",
+  "U.K.",
+  "georgeloweone@gmail.com",
+  "[python, javascript, c#, html, css]",
+];
+
+function start(i, j) {
+  if (j == arr.length) {
+    refresh_terminal_icon.style.display = "block";
+
+    return;
+  }
+  if (i < arr[j].length) {
+    setTimeout(function () {
+      i++;
+      code_container.innerHTML += arr[j][i];
+      // console.log("i is " + i);
+      console.log("j is " + j);
+      if (i == arr[j].length - 1) {
+        i = 0;
+        complete(j);
+        j++;
+      }
+      start(i, j);
+    }, 80);
+  }
+}
+start(0, 0);
+
+function complete(j) {
+  code_container.innerHTML += `\n <span class = "code-response"> ${responses_arr[j]}\n </span>`;
+}
+
+// function start(counter) {
+//   if (counter < 40) {
+//     setTimeout(function () {
+//       counter++;
+//       code_container.innerHTML += counter;
+//       console.log(counter);
+//       if (counter == 10) {
+//         complete();
+//       }
+//       if (counter == 20) {
+//         complete20();
+//       }
+//       start(counter);
+//     }, 80);
+//   }
+// }
+// start(0);
+
+// function complete() {
+//   code_container.innerHTML += `\n <span class = "code-response"> count to 10 complete \n </span>`;
+// }
+
+// function complete20() {
+//   code_container.innerHTML += `\n <span class = "code-response"> count to 20 complete \n </span>`;
+// }

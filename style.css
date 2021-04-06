@@ -209,9 +209,10 @@ ul.navigation li:last-child {
   text-align: left;
   border-radius: 10px;
   background-color: var(--terminal-background);
-  height: max-content;
+  height: 390px;
   box-shadow: 6px 6px 13px 0px rgba(50, 50, 50, 0.93);
   position: relative;
+  padding-bottom: 2rem;
 }
 
 .restart-terminal {
@@ -254,6 +255,9 @@ pre {
   cursor: pointer;
 }
 
+#refresh-terminal {
+  display: none;
+}
 #refresh-terminal:hover {
   cursor: pointer;
 }
