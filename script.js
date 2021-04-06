@@ -38,7 +38,7 @@ projects.set("1", {
     "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat facilis mollitia possimus harum minima? Nemo reprehenderit accusantium molestias, veritatis excepturi dicta sapiente vitae laboriosam quisquam modi animi, ullam omnis, vero ex magnam! Asperiores accusantium dolor, repudiandae reprehenderit autem deserunt eveniet vero eius explicabo quas adipisci expedita in. Sequi velit ullam porro laborum fuga nam vitae quod incidunt in atque! Ratione dolore nesciunt quia exercitationem earum culpa voluptates impedit obcaecati eos ipsa excepturi, repellat, tenetur dolor velit unde, error neque repudiandae. Labore, possimus. Esse nisi quo sed dolor asperiores eius, quae veritatis totam praesentium recusandae vero reprehenderit, debitis commodi id numquam!",
   media_src: "",
   code_src: "https://github.com/georgelowe/Instagram-Automation",
-  tags: [],
+  tags: ["Python3", "Selenium"],
 });
 projects.set("2", {
   id: "project2",
@@ -48,7 +48,7 @@ projects.set("2", {
   full_description: "Full project description",
   media_src: "Media/Ball.mp4",
   code_src: "https://github.com/georgelowe/VR-Object-Tracking",
-  tags: [],
+  tags: ["Python", "CSharp", "Unity3D", "UDP"],
 });
 projects.set("3", {
   id: "project3",
@@ -58,26 +58,30 @@ projects.set("3", {
   full_description: "Full project description",
   media_src: "",
   code_src: "https://github.com/georgelowe/georgelowe.github.io",
-  tags: [],
+  tags: ["html", "CSS", "JavaScript"],
 });
 
 function populate_landing_page() {
   projects.forEach((project) => {
     const project_el = document.createElement("div");
     project_el.id = project.id;
-    project_el.innerHTML = `<button class="card">
+
+    var html_part_1 = `<button class="card">
     <div class="project-title">
     ${project.title}
     </div>
     <div class="project-description">
     ${project.brief_description}
     </div>
-    <div class="tech-badge-container">
-    <span class="tech-badge"> #Browser Extension </span>
-    <span class="tech-badge"> #Browser Extension </span>
-    <span class="tech-badge"> #Browser Extension </span>
+    <div class="tech-badge-container">`;
+    var html_part_2 = "";
 
-    </div>
+    // Loop through tags and create span for each
+    project.tags.forEach((tag) => {
+      html_part_2 += `<span class="tech-badge">#${tag}</span>`;
+    });
+
+    var html_part_3 = ` </div>
     <a class="view-source-btn" href="${project.code_src}"
       ><div>
         <p class="card-git-link">Code</p>
@@ -87,6 +91,10 @@ function populate_landing_page() {
         ></i></div
     ></a>
   </button>`;
+
+    var complete_html = html_part_1 + html_part_2 + html_part_3;
+
+    project_el.innerHTML = complete_html;
     project_el.addEventListener("click", open_modal, false);
     projects_container.appendChild(project_el);
   });
