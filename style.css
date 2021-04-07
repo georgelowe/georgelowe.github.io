@@ -163,9 +163,6 @@ ul.navigation li:last-child {
 
   .hamburger {
     display: block;
-    position: absolute;
-    top: 1.5rem;
-    right: 0;
   }
 }
 
