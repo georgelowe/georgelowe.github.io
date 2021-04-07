@@ -163,6 +163,9 @@ ul.navigation li:last-child {
 
   .hamburger {
     display: block;
+    position: absolute;
+    top: 1.5rem;
+    right: 0;
   }
 }
 
@@ -267,7 +270,6 @@ pre {
 .cards {
   margin-top: 2rem;
   display: grid;
-
   grid-gap: 2rem;
 }
 
@@ -371,6 +373,7 @@ pre {
   left: 0;
   top: 0;
   width: 100%;
+
   height: 100%;
   overflow: auto;
   background-color: rgba(0, 0, 0, 0.5);
@@ -380,7 +383,7 @@ pre {
   background-color: var(--background-colour);
   margin: 10% auto;
   padding: 20px;
-
+  max-width: 1200px;
   border-radius: 8px;
   width: 85%;
   position: relative;
