@@ -15,7 +15,19 @@ html {
   margin: 0;
   font-family: "Nunito Sans", sans-serif;
   background-color: var(--background-colour);
+  /* background-image: linear-gradient(to right, #376e6f, #da7b93);
+  background-size: 400%;
+  animation: bg-animation 20s infinite alternate; */
 }
+
+/* @keyframes bg-animation {
+  0% {
+    background-position: left;
+  }
+  100% {
+    background-position: right;
+  }
+} */
 
 .page-container {
   width: 80%;
