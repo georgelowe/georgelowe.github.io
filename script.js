@@ -126,6 +126,10 @@ function open_modal(e) {
     let project = projects.get("3");
     populate_modal(project);
   }
+  if (this.id.includes("project4")) {
+    let project = projects.get("4");
+    populate_modal(project);
+  }
 }
 
 function populate_modal(project) {
