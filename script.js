@@ -61,6 +61,17 @@ projects.set("3", {
   code_src: "https://github.com/georgelowe/georgelowe.github.io",
   tags: ["html", "CSS", "JavaScript"],
 });
+projects.set("4", {
+  id: "project4",
+  title: "Warehouse Path Finding Visualisation",
+  brief_description:
+    "This project shows my implementation of a warehouse pick routing / path finding problem. Users are able to select 'pick bays', and are returned with the shortest route between them all.",
+  full_description: "",
+  media_src: "",
+  code_src:
+    "https://github.com/georgelowe/Warehouse-Path-Finding-Visualisation",
+  tags: ["html", "CSS", "JavaScript"],
+});
 
 function populate_landing_page() {
   projects.forEach((project) => {
